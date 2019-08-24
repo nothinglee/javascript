@@ -1,14 +1,21 @@
 <html>
-    <body>
-        <h1>고양이를 만져줘</h1>
-        <img src="cat1.png" onclick="
-            var audio = document.getElementById('audio_play'); 
+    <script>
+        function cat_play() {
+            var audio = document.getElementById('cat_play'); 
+            var image = document.getElementById('cat_img'); 
             if (audio.paused) { 
+                document.getElementById('cat_img').src = './cat2.png';
                 audio.play(); 
+                setTimeout("document.getElementById('cat_img').src = './cat1.png'", 1500);
             }else{ 
                 audio.pause(); 
                 audio.currentTime = 0 
-            } ">
-        <audio src="cat.mp3" id="audio_play"></audio>
+            } 
+        }
+    </script>
+    <body>
+        <h1>고양이를 만져줘</h1>
+        <img src="cat1.png" id='cat_img' onclick="cat_play()">
+        <audio src="cat.mp3" id="cat_play"></audio>
     </body>
 </html>
