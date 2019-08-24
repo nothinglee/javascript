@@ -1,15 +1,14 @@
 <html>
     <body>
-        <h1>Hello JS!!</h1>
-        <img src="cat1.png" onclick="{ 
+        <h1>고양이를 만져줘</h1>
+        <img src="cat1.png" onclick="
             var audio = document.getElementById('audio_play'); 
             if (audio.paused) { 
                 audio.play(); 
             }else{ 
                 audio.pause(); 
                 audio.currentTime = 0 
-            } 
-        } ">
+            } ">
         <audio src="cat.mp3" id="audio_play"></audio>
     </body>
 </html>
