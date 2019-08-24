@@ -6,6 +6,7 @@
             var image = document.getElementById('cat_img'); 
             if (audio.paused) { 
                 document.getElementById('cat_img').src = './cat2.png';
+                window.navigator.vibrate(1000);
                 audio.play();  
                 setTimeout("document.getElementById('cat_img').src = './cat1.png'", 1500);
             }else{ 
